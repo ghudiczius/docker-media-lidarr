@@ -3,6 +3,7 @@ FROM mono:6.8.0.96
 ARG VERSION
 
 RUN apt-get update && \
+    apt-get --assume-yes install libchromaprint-tools && \
     groupadd --gid=1000 lidarr && \
     useradd --gid=1000 --home-dir=/opt/lidarr --no-create-home --shell /bin/bash --uid 1000 lidarr && \
     mkdir /config /downloads /music /opt/lidarr && \
