@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-docker build --build-arg="VERSION=${SOURCE_BRANCH}" --tag="ghudiczius/lidarr:${SOURCE_BRANCH}" .
