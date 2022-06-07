@@ -18,4 +18,4 @@ WORKDIR /opt/lidarr
 
 EXPOSE 8686
 ENTRYPOINT ["mono"]
-CMD ["/opt/lidarr/Lidarr.exe", "-data=/config", "-nobrowser"]
+CMD ["/opt/lidarr/Lidarr", "-data=/config", "-nobrowser"]
