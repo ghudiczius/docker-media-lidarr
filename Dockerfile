@@ -2,18 +2,18 @@ FROM mcr.microsoft.com/dotnet/runtime:9.0
 
 ARG VERSION
 
-# renovate: release=bullseye depName=curl
+# renovate: release=bookworm depName=curl
 ENV CURL_VERSION=7.88.1-10+deb12u8
-# renovate: release=bullseye depName=libchromaprint-tools
+# renovate: release=bookworm depName=libchromaprint-tools
 ENV LIBCHROMAPRINT_TOOLS_VERSION=1.5.1-2+b1
-# renovate: release=bullseye depName=libsqlite3-0
-ENV LIBSQLITE3_VERSION=3.40.1-2+deb12u1
+# renovate: release=bookworm depName=libsqlite3-0
+ENV LIBSQLITE_VERSION=3.40.1-2+deb12u1
 
 RUN apt-get update && \
     apt-get --assume-yes --quiet install \
         curl="${CURL_VERSION}" \
         libchromaprint-tools="${LIBCHROMAPRINT_TOOLS_VERSION}" \
-        libsqlite3-0="${LIBSQLITE3_VERSION}" && \
+        libsqlite3-0="${LIBSQLITE_VERSION}" && \
     groupadd --gid=1000 lidarr && \
     useradd --gid=1000 --home-dir=/opt/lidarr --no-create-home --shell /bin/bash --uid 1000 lidarr && \
     mkdir /config /downloads /music /opt/lidarr && \
