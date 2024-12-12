@@ -10,7 +10,7 @@ ENV LIBCHROMAPRINT_TOOLS_VERSION=1.5.1-2+b1
 ENV LIBSQLITE3_VERSION=3.40.1-2+deb12u1
 
 RUN apt-get update && \
-    apt-get --assume-yes install \
+    apt-get --assume-yes --quiet install \
         curl="${CURL_VERSION}" \
         libchromaprint-tools="${LIBCHROMAPRINT_TOOLS_VERSION}" \
         libsqlite3-0="${LIBSQLITE3_VERSION}" && \
