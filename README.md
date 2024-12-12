@@ -1,6 +1,6 @@
 # Lidarr
 
-Simple docker image for Lidarr without any bloat, built on the official mono image. Lidarr runs as user `lidarr` with `uid` and `gid` `1000` and listens on port `8686`.
+Simple docker image for Lidarr without any bloat, built on the official dotnet runtime image. Lidarr runs as user `lidarr` with `uid` and `gid` `1000` and listens on port `8686`.
 
 ## Usage
 

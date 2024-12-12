@@ -1,9 +1,13 @@
-FROM mono:6.12.0.107
+FROM mcr.microsoft.com/dotnet/runtime:9.0
 
 ARG VERSION
 
+# renovate: release=bullseye depName=libchromaprint-tools
+ENV LIBCHROMAPRINT_TOOLS_VERSION=1.5.1-2+b1
+
 RUN apt-get update && \
-    apt-get --assume-yes install libchromaprint-tools && \
+    apt-get --assume-yes install \
+        libchromaprint-tools="${LIBCHROMAPRINT_TOOLS_VERSION}" && \
     groupadd --gid=1000 lidarr && \
     useradd --gid=1000 --home-dir=/opt/lidarr --no-create-home --shell /bin/bash --uid 1000 lidarr && \
     mkdir /config /downloads /music /opt/lidarr && \
