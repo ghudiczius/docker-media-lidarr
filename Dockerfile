@@ -28,4 +28,5 @@ VOLUME /config /downloads /music
 WORKDIR /opt/lidarr
 
 EXPOSE 8686
-CMD ["/opt/lidarr/Lidarr", "-data=/config", "-nobrowser"]
+ENTRYPOINT ["/opt/lidarr/Lidarr"]
+CMD ["-data=/config", "-nobrowser"]
