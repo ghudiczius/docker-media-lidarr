@@ -5,7 +5,7 @@ Simple docker image for Lidarr without any bloat, built on the official dotnet r
 ## Usage
 
 ```sh
-docker run --rm registry.gitlab.jmk.hu/media/lidarr:<VERSION> \
+docker run --rm ghudiczius/lidarr:<VERSION> \
   -p 8686:8686 \
   -v path/to/config:/config \
   -v path/to/downloads:/downloads \
@@ -15,7 +15,7 @@ docker run --rm registry.gitlab.jmk.hu/media/lidarr:<VERSION> \
 or
 
 ```sh
-docker run --rm ghudiczius/lidarr:<VERSION> \
+docker run --rm registry.gitlab.jmk.hu/media/lidarr:<VERSION> \
   -p 8686:8686 \
   -v path/to/config:/config \
   -v path/to/downloads:/downloads \
