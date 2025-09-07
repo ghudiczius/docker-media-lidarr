@@ -4,7 +4,7 @@ ARG SOURCE_CHANNEL
 ARG VERSION
 
 # renovate: release=bookworm depName=curl
-ENV CURL_VERSION=7.88.1-10+deb12u12
+ENV CURL_VERSION=7.88.1-10+deb12u14
 # renovate: release=bookworm depName=libchromaprint-tools
 ENV LIBCHROMAPRINT_TOOLS_VERSION=1.5.1-2+b1
 # renovate: release=bookworm depName=libsqlite3-0
