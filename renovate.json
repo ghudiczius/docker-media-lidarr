@@ -5,7 +5,7 @@
     "customType": "regex",
     "datasourceTemplate": "repology",
     "fileMatch": [
-      "^.gitlab-ci\\.ya?ml$"
+      "^Dockerfile$"
     ],
     "matchStrings": [
       "#\\s*renovate:\\s*datasource=repology\\s*depName=(?<depName>alpine.*?)\\s*versioning=(?<versioning>.*?)\\s*.*?_VERSION:\\s*\"(?<currentValue>.*)\""
